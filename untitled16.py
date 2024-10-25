@@ -64,7 +64,7 @@ def eliminate_variable(factors, var):
             new_factors.append(factor)
     return new_factors
 
-# Variable Elimination
+
 def variable_elimination(bn, query_var, evidence):
     factors = []
     for node_name, node in bn.nodes.items():
@@ -85,7 +85,7 @@ def variable_elimination(bn, query_var, evidence):
     result_factor['p'] = result_factor['p'] / result_factor['p'].sum()
     return result_factor[[query_var, 'p']]
 
-# Example Network Setup
+
 def setup_example_network():
     flu_cpt = pd.DataFrame({
         'Flu': ['T', 'F'],
